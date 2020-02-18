@@ -114,6 +114,10 @@
                         <div class="tabs-item tabs-item-first active">Как получить займ</div>
                         <div class="tabs-item tabs-item-second">Как оплатить займ</div>
                     </div>
+                    <select class="tabs-select">
+                        <option><div class="tabs-item tabs-item-first">Как получить займ</div></option>
+                        <option><div class="tabs-item tabs-item-second">Как оплатить займ</div></option>
+                    </select>
                     <div class="tabs-content">
                         <div class="tabs-content__item tabs-content__item_first active">
                             <div class="row steps">
@@ -292,9 +296,18 @@
                     через терминалы платежных систем.
                 </p>
             </div>
+            <div class="read-all">
+                <div class="container">
+                    <button>
+                        <span>Прочитать полностью</span>
+                        <span>Скрыть</span>
+                    </button>
+                </div>
+            </div>
         </section>
         <section class="map">
             <img class="map__img" src="assets/map.png" alt="map">
+            <img class="map__img-min" src="assets/map-min.png" alt="map-min">
             <div class="container">
                 <div class="map__info">
                     <h2>Офисы в городе</h2>
@@ -350,6 +363,32 @@
             </div>
         </div>
     </footer>
+    <button class="fixed-mobile-btn">Получить деньги</button>   
+    <section class="mobile-menu-container"></section>
+    <section class="mobile-menu">
+        <div class="menu__header">
+            <button type="button">×</button>
+        </div>
+        <ul class="menu__nav">
+            <li class="menu__nav_item"><a href="#">Как получить / оплатить</a></li>
+            <li class="menu__nav_item"><a href="#">Филиалы</a></li>
+            <li class="menu__nav_item"><a href="#">Оплатить займ онлайн</a></li>
+            <li class="menu__nav_item"><a href="#">Документы</a></li>
+            <li class="menu__nav_item"><a href="#">О компании</a></li>
+            <li class="menu__nav_item"><a href="#">Служба поддержки клиентов</a></li>
+        </ul>
+        <div class="menu__contacts">
+            <div class="menu__phone-title">Звонок бесплатный</div>
+            <div class="menu__phone">8 800 700 69 22</div>
+            <select class="header__select">
+                <option>Ульяновск</option>
+                <option>Москва</option>
+                <option>Санк-Петербург</option>
+                <option>Екатеринбург</option>
+                <option>Нижний Новгород</option>
+            </select>
+        </div>
+    </section>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/jquery.nice-select.js"></script>

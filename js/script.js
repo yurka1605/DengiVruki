@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     // инициализация html-элементов
     $('.header__select').niceSelect();
+    $('.tabs-select').niceSelect();
     
     $( ".slider-1 .slider__body" ).slider({
         range: false,
@@ -80,6 +81,50 @@ $( document ).ready(function() {
                     break;
             }
             $( ".slider-2 .slider__title_summ" ).html(mounts + days);
+        }
+    });
+    
+    // close menu
+    $('.menu__header button').on('click', function() {
+        $('html, body').removeClass('noscroll');
+        $('.mobile-menu-container').removeClass('show');
+        $('.mobile-menu').removeClass('show');
+    });
+
+    // show menu
+    $('.mobile-menu-btn').on('click', function() {
+        $('.mobile-menu').addClass('show');
+        setTimeout(() => {
+            $('.mobile-menu-container').addClass('show');
+        }, 310);
+        $('html, body').addClass('noscroll');
+    });
+
+    // show all
+    $('.read-all button').on('click', function () {
+        if ($(this).hasClass('active')) {
+            $('.info > .container').height('184px');
+            $('.read-all').removeClass('noshadow');
+        } else {
+            $('.info > .container').height('100%');
+            $('.read-all').addClass('noshadow');
+        }
+        $(this).toggleClass('active');
+    });
+
+    // кнопка-scroll до формы на мобилке
+    $('.fixed-mobile-btn').click(function () {
+        var destination = $('.banner').offset().top;
+        $('body').animate({ scrollTop: destination }, 600);
+        $('html').animate({ scrollTop: destination }, 600);
+    });
+
+    // при скролинге показываем кнопку прокрутки к форме, на мобилках
+    $(window).scroll(function () {
+        if ($(window).width() <= '375') {
+            var top = $('.tabs-content').offset().top;
+            $(window).scrollTop() >= top ?
+                $('.fixed-mobile-btn').addClass('show') : $('.fixed-mobile-btn').removeClass('show');
         }
     });
 });

@@ -31,12 +31,12 @@
   .nice-select:active, .nice-select.open, .nice-select:focus {
     border-color: #999; }
   .nice-select:after {
-    border-bottom: 2px solid #999;
-    border-right: 2px solid #999;
+    border-bottom: 3px solid #999;
+    border-right: 3px solid #999;
     content: '';
     display: block;
     height: 5px;
-    margin-top: -4px;
+    margin-top: -10px;
     pointer-events: none;
     position: absolute;
     right: 12px;
