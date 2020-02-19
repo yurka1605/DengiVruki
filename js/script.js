@@ -2,12 +2,15 @@ $( document ).ready(function() {
     // инициализация html-элементов
     $('.header__select').niceSelect();
     $('.tabs-select').niceSelect();
+    $('.tabs-select .list li').each(function() {
+        $(this).attr('onclick', 'changeTab()');
+    });
     
     $( ".slider-1 .slider__body" ).slider({
         range: false,
         min: 10,
-        max: 1000,
-        value: 70,
+        max: 30,
+        value: 14,
         range: "min",
         step: 1,
         slide: function( event, ui ) {
@@ -19,7 +22,7 @@ $( document ).ready(function() {
     $( ".slider-2 .slider__body" ).slider({
         range: false,
         min: 5,
-        max: 120,
+        max: 30,
         value: 14,
         range: "min",
         step: 1,
@@ -31,7 +34,8 @@ $( document ).ready(function() {
                 case 0:
                     break;
                 case 1:
-                    mounts = fullMonth + ' месяц ';
+                    // mounts = fullMonth + ' месяц ';
+                    mounts = 30 + ' дней';
                     break;
                 default:
                     mounts = fullMonth + ' месяца ';
@@ -128,3 +132,11 @@ $( document ).ready(function() {
         }
     });
 });
+
+// tads action
+function changeTab() {
+    $('.tabs .tabs-item').each(function(i, el) {
+        $(el).toggleClass('active');
+        $(`.tabs-content .tabs-content__item:nth-child(${ i + 1 })`).toggleClass('active');
+    });
+}

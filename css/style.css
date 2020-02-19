@@ -223,6 +223,12 @@ li {
     align-items: center;
     justify-content: center;
 }
+.tabs-content__item {
+    display: none;
+}
+.tabs-content__item.active {
+    display: block;
+}
 .tabs-item {
     padding: 10px 0;
     margin: 0 40px;
@@ -916,6 +922,9 @@ footer .copyright {
         left: 80px;
         height: 2px;
     }
+    .step:last-child .circle-num::after {
+        content: "";
+    }
     .recomendation__card {
         flex-direction: column;
         max-height: fit-content;
@@ -1003,12 +1012,36 @@ footer .copyright {
     .fixed-mobile-btn.show {
         display: flex;
     }
-    /* .map__img {
-        display: none;
-    }
-    .map__img-min {
-        display: block;
-        height: 700px;
-        width: 100%;
-    } */
 }
+
+/* How to */
+.section_micro {
+    position: relative;
+    z-index: 4;
+    background: #fff;
+    overflow: hidden;
+    padding: 3.071em 0 2em 0;
+}
+.section_micro ul li,
+.section_micro p {
+    font-size: 18px;
+}
+.section_micro h2 {
+    text-align: left;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 22px;
+    font-weight: 600;
+}
+.section_micro a {
+    color: #728c01;
+    text-decoration: underline;
+    transition: all 0.2s ease-out;
+}
+.section_micro h1 {
+    font-size: 2.5em;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+/* END:How to */
