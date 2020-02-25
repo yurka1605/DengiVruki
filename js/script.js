@@ -125,7 +125,7 @@ $( document ).ready(function() {
 
     // при скролинге показываем кнопку прокрутки к форме, на мобилках
     $(window).scroll(function () {
-        if ($(window).width() <= '375') {
+        if ($(window).width() <= '768') {
             var top = $('.tabs-content').offset().top;
             $(window).scrollTop() >= top ?
                 $('.fixed-mobile-btn').addClass('show') : $('.fixed-mobile-btn').removeClass('show');

@@ -1006,11 +1006,22 @@ footer .copyright {
     .banner__form button {
         padding: 10px 0;
     }
-}
-
-@media (max-width: 375px) {
     .fixed-mobile-btn.show {
         display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .card__name {
+        text-align: center;
+    }
+    .card__haracteristic {
+        justify-content: center;
+    }
+    .card__info button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
